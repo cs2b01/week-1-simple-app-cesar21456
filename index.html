@@ -1,12 +1,32 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
 <head>
-<meta charset="UTF-8">
-<title>Title of the document</title>
+    <link rel="stylesheet" href="./css.css" type="text/css" media="all" />
+<script>
+
+function cargar(){
+if (document.getElementById("password").value==document.getElementById("usuario").value){
+    document.getElementById("resultado").innerHTML="se ha logeado correctamente.";
+}else{
+    document.getElementById("resultado").innerHTML="no se ha logeado correctamente.";
+}
+}
+
+</script>
 </head>
-
 <body>
-Content of the document......
+<div>ingrese su usuario</div>
+<div class="nose2">
+<input type="text" class="nose2" id="usuario" > </input>
+</div>
+<br>
+<div>ingrese password </div>
+<div class="nose2">
+<input type="password" value="" id="password" class="nose2"></input>
+</div>
+<br>
+<div class="nose">
+<input type="button" value="log in" onclick="cargar()" ></input>
+</div>
+<div id="resultado"></div>
 </body>
-
 </html>
